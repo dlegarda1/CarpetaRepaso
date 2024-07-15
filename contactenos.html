@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="estilos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,9 +20,40 @@
     </header>
     <main>
         <form>
-            
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
+            <input type="text" id="correo" name="correo" placeholder="Ingrese su correo" required>
+            <input type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono"><br>
+            <p>Tipo de Usuario </p>
+                <input type="radio" id="persona" name="genero" value="persona">
+                <label for="hombre">persona</label><br>
+                <input type="radio" id="empresa" name="genero" value="empresa">
+                <label for="mujer">empresa</label><br>
+            <input type="text" id="nomEmpresa" name="nombreEmpresa" placeholder="ingrese su empresa" required>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su mensaje"></textarea>
         </form>
 
     </main>
+
+<div>
+    <h1>Ejemplo de Radio Buton</h1>
+    <form>
+        <label>
+            <input type="radio" name="tipo" value="empresa" onclick="mostrarCampo('empresa')" required> Empresa
+        </label>
+        <label>
+            <input type="radio" name="tipo" value="persona" onclick="mostrarCampo('persona')" required> Persona
+        </label>
+
+        <div id="campoEmpresa" class="hidden">
+            <label for="nombreEmpresa">Nombre de la Empresa:</label>
+            <input type="text" id="nombreEmpresa" name="nombreEmpresa" placeholder="Ingrese el nombre de la empresa">
+        </div>
+
+        
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="programa.js"></script>
 </body>
 </html>

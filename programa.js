@@ -1,6 +1,13 @@
-function menu(){
-    document.getElementById('mendesplegable').style.display='block';
- return true;
+
+
+function mostrarCampo(tipo) {
+    
+    console.log(tipo);
+    if (tipo === 'empresa') {
+        campoEmpresa.classList.remove('hidden');
+    } else {
+        campoEmpresa.classList.add('hidden');
+    }
 }
 
-document.getElementById('Contacto').addEventListener("mouseover",menu);
+
